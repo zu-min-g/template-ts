@@ -80,7 +80,7 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+#dist
 
 # Gatsby files
 .cache/
@@ -108,3 +108,23 @@ dist
 
 # local test code
 src/test/
+dist/module/test/
+
+# code for browser
+dist/browser/
+
+# test code
+test/
+
+# github actions
+.github/
+
+# project settings
+.issuetracker
+
+# build config
+webpack.config.js
+.eslintrc.json
+tsconfig.json
+.babelrc
+.editorconfig
