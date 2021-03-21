@@ -22,7 +22,7 @@ let config = {
     rules: [
       {
         test: /\.ts$/,
-        loader: ["babel-loader"],
+        loader: "babel-loader",
         exclude: path.resolve(__dirname, "vendor"),
       },
     ],
@@ -31,13 +31,14 @@ let config = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(env),
     }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.BannerPlugin({
       banner: `${packageJson.name} | v${packageJson.version} | ${packageJson.license} License`,
     }),
   ],
   optimization: {
     minimize: false,
+    chunkIds: "total-size",
+    moduleIds: "size",
   },
 }
 
